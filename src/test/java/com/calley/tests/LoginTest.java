@@ -16,7 +16,5 @@ public class LoginTest extends BaseTest {
 
         System.out.println(driver.getTitle());
 
-        // Abhi login mat karna
-        // Sirf Page Object create hua hai
     }
 }
