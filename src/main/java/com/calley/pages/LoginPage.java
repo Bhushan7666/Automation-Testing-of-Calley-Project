@@ -17,6 +17,9 @@ public class LoginPage {
     By password = By.cssSelector("input#txtPassword");
     By loginBtn = By.cssSelector("input#btnLogIn");
 
+    // Error Message
+    By errorMessage = By.cssSelector("div.sweet-alert h2");
+
     // Actions
     public void enterEmail(String userEmail) {
         driver.findElement(email).sendKeys(userEmail);
@@ -35,4 +38,10 @@ public class LoginPage {
         enterPassword(userPassword);
         clickLogin();
     }
+
+    // Read Error Message
+    public String getErrorMessage() {
+        return driver.findElement(errorMessage).getText();
+    }
+
 }
