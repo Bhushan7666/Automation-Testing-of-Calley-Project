@@ -9,7 +9,7 @@ public class RegistrationPage {
 
     WebDriver driver;
 
-    public RegistrationPage(WebDriver driver) {
+    public RegistrationPage(WebDriver driver) { 
         this.driver = driver;
     }
 
@@ -17,7 +17,7 @@ public class RegistrationPage {
     // Locators
     // =======================
 
-    By name = By.cssSelector("#txtName");
+    By name = By.cssSelector("#txtName"); 
     By email = By.cssSelector("#txtEmail");
     By password = By.cssSelector("#txtPassword");
     By whatsapp = By.cssSelector("#txt_mobile");

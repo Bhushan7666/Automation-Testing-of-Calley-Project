@@ -16,9 +16,9 @@ public class RegistrationTest extends BaseTest {
 
         registration.register(
                 "Ria Mcconnell",
-                "zasena@mailinator.com",
+                "zas@mailinator.com",
                 "Pa$$w0rd!",
-                "9876883210");
+                "7666882051");
 
         System.out.println("Registration Form Filled");
 
@@ -33,7 +33,7 @@ public class RegistrationTest extends BaseTest {
         Thread.sleep(2000);
 
         registration.clickSignUp();
-
+ 
         System.out.println("Registration Submitted");
 
         Thread.sleep(10000);

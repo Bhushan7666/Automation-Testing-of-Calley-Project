@@ -39,6 +39,11 @@
             <version>6.2.0</version>
         </dependency>
 
+        <dependency>
+        	<groupId>com.java17_selenium4.8.3</groupId>
+        	<artifactId>Autometion_selenium_project</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
