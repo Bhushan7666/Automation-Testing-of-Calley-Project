@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-14T22:38:23 MDT" name="Default suite" finished-at="2026-08-14T22:39:46 MDT" duration-ms="83139">
+  <suite started-at="2026-08-16T20:20:24 MDT" name="Default suite" finished-at="2026-08-16T20:21:42 MDT" duration-ms="78152">
     <groups>
     </groups>
-    <test started-at="2026-08-14T22:38:23 MDT" name="Default test" finished-at="2026-08-14T22:39:46 MDT" duration-ms="83139">
+    <test started-at="2026-08-16T20:20:24 MDT" name="Default test" finished-at="2026-08-16T20:21:42 MDT" duration-ms="78152">
       <class name="com.calley.tests.RegistrationTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.calley.tests.RegistrationTest@229f66ed]" started-at="2026-08-14T22:38:23 MDT" name="setup" finished-at="2026-08-14T22:38:40 MDT" duration-ms="16508" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.calley.tests.RegistrationTest@229f66ed]" started-at="2026-08-16T20:20:24 MDT" name="setup" finished-at="2026-08-16T20:20:49 MDT" duration-ms="24956" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="userRegistration()[pri:0, instance:com.calley.tests.RegistrationTest@229f66ed]" started-at="2026-08-14T22:38:40 MDT" name="userRegistration" finished-at="2026-08-14T22:39:46 MDT" duration-ms="66395" status="PASS">
+        <test-method signature="userRegistration()[pri:0, instance:com.calley.tests.RegistrationTest@229f66ed]" started-at="2026-08-16T20:20:49 MDT" name="userRegistration" finished-at="2026-08-16T20:21:42 MDT" duration-ms="52923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.calley.tests.RegistrationTest@229f66ed]" started-at="2026-08-14T22:39:46 MDT" name="tearDown" finished-at="2026-08-14T22:39:46 MDT" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.calley.tests.RegistrationTest@229f66ed]" started-at="2026-08-16T20:21:42 MDT" name="tearDown" finished-at="2026-08-16T20:21:42 MDT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

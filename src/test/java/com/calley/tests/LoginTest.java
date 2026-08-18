@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
 
         // Invalid Login
-        loginPage.login("feqoza@mailinator.com", "Pa$$w0rd!");
+        loginPage.login("zas@mailinator.com", "Pa$$w0rd!");
 
         // Read Error Message
         String actualMessage = loginPage.getErrorMessage();
