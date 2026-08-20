@@ -4,7 +4,7 @@
 
 This project automates the end-to-end workflow of the **Calley Team Account** web application using **Java, Selenium WebDriver, TestNG, Maven, and Page Object Model (POM)**.
 
-The automation framework is designed following industry best practices with reusable components, clean code structure, and data-driven architecture.
+The automation framework is designed following industry best practice with reusable components, clean code structure, and data-driven architecture.
 
 The project covers the complete user journey from registration to call list import.
 
