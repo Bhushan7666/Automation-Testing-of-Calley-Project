@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.calley.tests.RegistrationTest">
+      <class name="com.calley.tests.StandardImportTest">
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="userRegistration"/>
+          <include name="openStandardImport"/>
         </methods>
-      </class> <!-- com.calley.tests.RegistrationTest -->
+      </class> <!-- com.calley.tests.StandardImportTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
