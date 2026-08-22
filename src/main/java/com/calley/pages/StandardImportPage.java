@@ -1,5 +1,6 @@
 package com.calley.pages;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -14,12 +15,18 @@ public class StandardImportPage {
 
     //locater add standard import
     By standardImport = By.cssSelector(
-    		"li[class='active'] li:nth-child(1) a:nth-child(1) span:nth-child(1)"
-    		
+    		"li[class='active'] li:nth-child(1) a:nth-child(1) span:nth-child(1)"		
     );
+    
+    By listName = By.cssSelector("");
+    
     
     // action 
     public void ClickStandardImport() {
     	driver.findElement(standardImport);
+    }
+    
+    public void enterListName(String name) {
+    	driver.findElement(listName).sendKeys(name);
     }
 }

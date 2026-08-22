@@ -25,6 +25,11 @@ public class StandardImportTest extends BaseTest {
         standardImport.ClickStandardImport();
         
         System.out.println("Standard Import Page Test Started");
+        
+        //Enter List Name
+        standardImport.enterListName("Test List");
+        
+        System.out.println(" List Name Entered");
 
     }
 }
