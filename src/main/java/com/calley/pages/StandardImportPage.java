@@ -20,6 +20,8 @@ public class StandardImportPage {
     
     By listName = By.cssSelector("");
     
+    // File Upload
+    By fileUpload = By.cssSelector("YOUR_FILE_INPUT_LOCATOR");
     
     // action 
     public void ClickStandardImport() {
@@ -28,5 +30,9 @@ public class StandardImportPage {
     
     public void enterListName(String name) {
     	driver.findElement(listName).sendKeys(name);
+    }
+
+    public void uploadFile(String filePath) {
+        driver.findElement(fileUpload).sendKeys(filePath);
     }
 }

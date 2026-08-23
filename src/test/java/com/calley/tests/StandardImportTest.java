@@ -31,5 +31,11 @@ public class StandardImportTest extends BaseTest {
         
         System.out.println(" List Name Entered");
 
+        // Upload File
+        standardImport.uploadFile(
+                "C:\\Users\\hp\\Downloads\\Sample File.xlsx"
+        );
+
+        System.out.println("File Selected");
     }
 }
