@@ -21,7 +21,7 @@ public class StandardImportPage {
     By listName = By.cssSelector("");
     
     // File Upload
-    By fileUpload = By.cssSelector("YOUR_FILE_INPUT_LOCATOR");
+    By fileUpload = By.cssSelector("");
     
     // action 
     public void ClickStandardImport() {
