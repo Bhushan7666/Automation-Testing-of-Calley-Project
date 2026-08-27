@@ -18,10 +18,10 @@ public class StandardImportPage {
     		"li[class='active'] li:nth-child(1) a:nth-child(1) span:nth-child(1)"		
     );
     
-    By listName = By.cssSelector("");
+   // By listName = By.cssSelector("  ");
     
     // File Upload
-    By fileUpload = By.cssSelector("");
+   /// By fileUpload = By.cssSelector("  ");
     
     // action 
     public void ClickStandardImport() {
@@ -29,10 +29,10 @@ public class StandardImportPage {
     }
     
     public void enterListName(String name) {
-    	driver.findElement(listName).sendKeys(name);
+ //   	driver.findElement(listName).sendKeys(name);
     }
 
     public void uploadFile(String filePath) {
-        driver.findElement(fileUpload).sendKeys(filePath);
+ //       driver.findElement(fileUpload).sendKeys(filePath);
     }
 }
