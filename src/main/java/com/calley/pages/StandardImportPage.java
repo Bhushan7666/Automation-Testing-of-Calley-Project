@@ -18,12 +18,22 @@ public class StandardImportPage {
     }
 
     // Correct Locators
+    By PopUp1 = By.cssSelector("button.close span");
+    By PopUp2 = By.cssSelector("id#onesignal-slidedown-cancel-button");
     By callListMenu = By.xpath("//a[normalize-space()='Call List']");
     By standardImport = By.xpath("//a[contains(text(),'Standard Import')]");
     By listName = By.cssSelector("#ContentPlaceHolder1_txtlistname");
     By fileUpload = By.cssSelector("input[type='file']");									
     
     // Actions
+    
+    public void PopUp() {
+    	driver.findElement(PopUp1).click();
+    	driver.findElement(PopUp2).click();
+    	
+    	
+    }
+    
     public void ClickStandardImport() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         

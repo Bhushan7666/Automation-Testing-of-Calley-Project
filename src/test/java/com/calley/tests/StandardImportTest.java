@@ -22,6 +22,8 @@ public class StandardImportTest extends BaseTest {
     	
         StandardImportPage standardImport = new StandardImportPage(driver);
 
+        standardImport.PopUp();
+        
         standardImport.ClickStandardImport();
         
         System.out.println("Standard Import Page Test Started");
