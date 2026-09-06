@@ -6,8 +6,8 @@
       <class name="com.calley.tests.StandardImportTest">
         <methods>
           <include name="tearDown"/>
-          <include name="setup"/>
           <include name="openStandardImport"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.calley.tests.StandardImportTest -->
     </classes>

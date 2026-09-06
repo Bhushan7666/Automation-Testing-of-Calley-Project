@@ -10,51 +10,50 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class StandardImportPage {
 
-    WebDriver driver;
+    private WebDriver driver;
+    private WebDriverWait wait;
 
-    // Constructor
     public StandardImportPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    // Correct Locators
-    By PopUp1 = By.cssSelector("button.close span");
-    By PopUp2 = By.cssSelector("id#onesignal-slidedown-cancel-button");
-    By callListMenu = By.xpath("//a[normalize-space()='Call List']");
-    By standardImport = By.xpath("//a[contains(text(),'Standard Import')]");
-    By listName = By.cssSelector("#ContentPlaceHolder1_txtlistname");
-    By fileUpload = By.cssSelector("input[type='file']");									
-    
-    // Actions
-    
-    public void PopUp() {
-    	driver.findElement(PopUp1).click();
-    	driver.findElement(PopUp2).click();
-    	
-    	
+    // Locators
+    private By modalCloseBtn = By.cssSelector("button.close span");
+    private By pushNotificationCancelBtn = By.cssSelector("#onesignal-slidedown-cancel-button");
+    private By callListMenu = By.xpath("//a[contains(normalize-space(),'Call List')]");
+
+    // 1. Dashboard Popups Close करने का तरीका
+    public void handlePopups() {
+        WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+        // Website Modal Banner
+        try {
+            WebElement closeBtn = shortWait.until(ExpectedConditions.elementToBeClickable(modalCloseBtn));
+            closeBtn.click();
+            System.out.println("[INFO] Website Modal Popup closed.");
+        } catch (Exception e) {
+            System.out.println("[INFO] Website Modal Popup not visible.");
+        }
+
+        // Push Notification Slide-down
+        try {
+            WebElement cancelBtn = shortWait.until(ExpectedConditions.elementToBeClickable(pushNotificationCancelBtn));
+            cancelBtn.click();
+            System.out.println("[INFO] Push Notification Popup closed.");
+        } catch (Exception e) {
+            System.out.println("[INFO] Push Notification Popup not visible.");
+        }
     }
-    
-    public void ClickStandardImport() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        
-        // 1. Call List visible hone tak wait karein
+
+    // 2. Only Hover on Call List Menu
+    public void hoverOnCallList() {
+        System.out.println("[INFO] Waiting for 'Call List' menu element...");
         WebElement menu = wait.until(ExpectedConditions.visibilityOfElementLocated(callListMenu));
-        
-        // 2. Call List par Hover karein
+
+        System.out.println("[INFO] Performing Hover action on 'Call List'...");
         Actions actions = new Actions(driver);
         actions.moveToElement(menu).perform();
-        
-        // 3. Sub-menu (Standard Import) clickable hone par click karein
-        WebElement subMenu = wait.until(ExpectedConditions.elementToBeClickable(standardImport));
-        subMenu.click();
-    }
-    
-    public void enterListName(String name) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(listName)).sendKeys(name);
-    } 
-
-    public void uploadFile(String filePath) {
-        driver.findElement(fileUpload).sendKeys(filePath);
+        System.out.println("[INFO] Successfully hovered over 'Call List'.");
     }
 }

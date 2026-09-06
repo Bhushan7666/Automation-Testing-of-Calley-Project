@@ -1,7 +1,6 @@
 package com.calley.tests;
 
 import org.testng.annotations.Test;
-
 import com.calley.base.BaseTest;
 import com.calley.pages.LoginPage;
 import com.calley.pages.StandardImportPage;
@@ -9,35 +8,25 @@ import com.calley.pages.StandardImportPage;
 public class StandardImportTest extends BaseTest {
 
     @Test
-    public void openStandardImport() {
-    	
-    	//for loging
-    	
-    	LoginPage loginPage = new LoginPage(driver);
-    	loginPage.login("zas@mailinator.com", "Pa$$w0rd!");
-    	
-    	System.out.println(" Login Successful ");
-    	
-    	// Standard import
-    	
+    public void testCallListHover() throws InterruptedException {
+
+        // Step 1: Login
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login("zas@mailinator.com", "Pa$$w0rd!");
+        System.out.println("[TEST STEP] Logged in successfully.");
+
+        // Step 2: Initialize StandardImportPage
         StandardImportPage standardImport = new StandardImportPage(driver);
 
-        standardImport.PopUp();
-        
-        standardImport.ClickStandardImport();
-        
-        System.out.println("Standard Import Page Test Started");
-        
-        //Enter List Name
-        standardImport.enterListName("Test List");
-        
-        System.out.println(" List Name Entered");
+        // Step 3: Handle Popups
+        standardImport.handlePopups();
 
-        // Upload File
-        standardImport.uploadFile(
-                "C:\\Users\\hp\\Downloads\\Sample File.xlsx"
-        );
+        // Step 4: Hover on Call List
+        standardImport.hoverOnCallList();
 
-        System.out.println("File Selected");
+        // Screen par dropdown dikhne ke liye 5 second ka pause
+        Thread.sleep(5000);
+        
+        System.out.println("[TEST STEP] Call List Hover Test Execution Finished.");
     }
 }
