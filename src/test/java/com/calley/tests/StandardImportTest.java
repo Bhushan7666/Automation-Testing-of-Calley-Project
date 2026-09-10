@@ -45,7 +45,7 @@ public class StandardImportTest extends BaseTest {
         standardImport.enterListName("Test Automation List");
 
         // Step 7: NAYA STEP - File Choose karna
-        // (Aapne yahi path diya tha, isko apne PC ke hisaab se match kar lena)
+        // (isko apne PC ke hisaab se match kar lena)
         String filePath = "C:\\Users\\hp\\Downloads\\Sample File.xlsx";
         standardImport.chooseFile(filePath);
 
